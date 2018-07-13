@@ -10,9 +10,9 @@
             {%- if curkey == 'rss' -%}
               <a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ element.name }}">
             {%- elsif curkey == 'yelp' -%}
-              <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" title="{{ element.name }}">
+              <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" rel="nofollow" target="_blank" title="{{ element.name }}">
             {%- else -%}
-              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}">
+              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" rel="nofollow" target="_blank" title="{{ element.name }}">
             {%- endif -%}
                 <span class="fa-stack fa-lg" aria-hidden="true">
                   <i class="fa fa-circle fa-stack-2x"></i>
@@ -41,10 +41,6 @@
       {% endif%}
       </p>
           <!-- Please don't remove this, keep my open source work credited :) -->
-    <p class="theme-by text-muted">
-      Theme by
-      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
-    </p>
       </div>
     </div>
   </div>
